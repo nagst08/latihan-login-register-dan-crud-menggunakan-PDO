@@ -16,6 +16,7 @@ include_once '../controller/product.php';
 include_once '../controller/category.php';
 
 // get database connection
+include_once '../database/database.php';
 $database = new Database();
 $db = $database->getConnection();
 
