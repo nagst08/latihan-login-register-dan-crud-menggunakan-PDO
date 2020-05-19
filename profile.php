@@ -8,13 +8,15 @@
 // Start Session
 session_start();
 
+include 'controller/UserController.php';
+
 // check user login
 if (empty($_SESSION['user_id'])) {
     header("Location: index");
 }
 
 // Database connection
-require __DIR__ . '/database/database.php';
+// require __DIR__ . '/database/database.php';
 $database = new Database();
 $db = $database->getConnection();
 
